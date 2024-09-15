@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Blackjack.</title>
+    <!-- Link to the CSS stylesheet -->
+    <link rel="stylesheet" href="styles.css">
+    <!-- Include Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Carousel Container -->
+    <div class="carousel-container">
+        <div class="carousel">
+            <div class="slide active">
+                <h2>Welcome to Blackjack</h2>
+                <p>Blackjack is a popular card game where the goal is to beat the dealer's hand without going over 21.</p>
+            </div>
+            <div class="slide">
+                <h2>Card Values</h2>
+                <p>Cards 2-10 are face value, face cards are worth 10, and Aces are worth 1 or 11.</p>
+            </div>
+            <div class="slide">
+                <h2>Gameplay</h2>
+                <p>You can 'Hit' to take another card or 'Stand' to hold your total. Try to get as close to 21 as possible.</p>
+            </div>
+        </div>
+        <div class="carousel-controls">
+            <button id="prev">Prev</button>
+            <button id="next">Next</button>
+            <button id="start-game">Start Game</button>
+        </div>
+    </div>
+
+    <!-- Game Container -->
+    <div id="game-container" style="display:none;">
+        <div id="game-table">
+            <!-- Player's Balance and Betting Area -->
+            <div id="balance-area">
+                <h3>Balance: $<span id="balance">1000</span></h3>
+                <div id="betting-area">
+                    <label for="bet-amount">Place Your Bet: $</label>
+                    <input type="number" id="bet-amount" min="1" max="1000" value="100">
+                    <button id="place-bet">Place Bet</button>
+                </div>
+            </div>
+            <!-- Dealer's Area -->
+            <div id="dealer-area">
+                <h2>Dealer's Hand</h2>
+                <div id="dealer-hand" class="hand"></div>
+            </div>
+            <!-- Opponents' Area -->
+            <div id="opponents-area">
+                <h2>Opponents</h2>
+                <p id="opponents-info">There are 2 opponents playing.</p>
+            </div>
+            <!-- Player's Area -->
+            <div id="player-area" style="display:none;">
+                <h2>Your Hand</h2>
+                <div id="player-hand" class="hand"></div>
+                <div id="player-controls">
+                    <button id="hit">Hit</button>
+                    <button id="stand">Stand</button>
+                </div>
+            </div>
+            <!-- Message Area -->
+            <div id="message"></div>
+        </div>
+    </div>
+
+    <!-- Link to the JavaScript file -->
+    <script src="script.js"></script>
+</body>
+</html>
