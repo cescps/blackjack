@@ -1,0 +1,221 @@
+/* General Styles */
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #0B0E11;
+    color: #ECEFF1;
+    margin: 0;
+    padding: 0;
+}
+
+/* Typography */
+h2, h3 {
+    margin: 10px 0;
+}
+
+p, label {
+    font-size: 1em;
+}
+
+h2 {
+    font-size: 1.5em;
+}
+
+h3 {
+    font-size: 1.2em;
+}
+
+/* Buttons */
+button {
+    padding: 10px 15px;
+    margin: 5px;
+    background-color: #1C7C54;
+    color: #ECEFF1;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1em;
+    transition: background-color 0.3s, transform 0.1s;
+}
+
+button:hover {
+    background-color: #145C40;
+}
+
+button:active {
+    transform: scale(0.98);
+}
+
+button:disabled {
+    background-color: #555;
+    cursor: not-allowed;
+}
+
+/* Carousel Styles */
+.carousel-container {
+    max-width: 600px;
+    margin: 50px auto;
+    text-align: center;
+    padding: 0 20px;
+}
+
+.carousel {
+    position: relative;
+    overflow: hidden;
+    min-height: 200px;
+}
+
+.slide {
+    display: none;
+    padding: 20px;
+}
+
+.slide.active {
+    display: block;
+}
+
+.carousel-controls {
+    margin-top: 20px;
+}
+
+/* Game Table Styles */
+#game-table {
+    max-width: 900px;
+    margin: 20px auto;
+    text-align: center;
+    padding: 0 20px;
+}
+
+/* Balance and Betting Area */
+#balance-area {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+#betting-area {
+    margin-top: 10px;
+}
+
+#bet-amount {
+    width: 80px;
+    padding: 5px;
+    font-size: 1em;
+}
+
+#place-bet {
+    padding: 10px 15px;
+    margin-left: 10px;
+}
+
+/* Dealer, Opponents, and Player Areas */
+#dealer-area, #opponents-area, #player-area {
+    margin-top: 20px;
+}
+
+.hand {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin: 20px 0;
+}
+
+/* Card Styles */
+.card {
+    width: 80px;
+    height: 120px;
+    margin: 10px 5px;
+    background-color: #FFFFFF;
+    color: #000;
+    border-radius: 8px;
+    position: relative;
+    text-align: center;
+    font-size: 2.5em; /* Increase font size for suit symbol */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Remove pseudo-elements */
+.card::before, .card::after {
+    content: none;
+}
+
+/* Card Suit Colors */
+.card[data-suit="♥"], .card[data-suit="♦"] {
+    color: #D32F2F;
+}
+
+.card-back {
+    background-color: #1C7C54;
+    color: #ECEFF1;
+}
+
+/* Player Controls */
+#player-controls {
+    margin-top: 10px;
+}
+
+#player-controls button {
+    padding: 10px 20px;
+    font-size: 1em;
+}
+
+/* Message Area */
+#message {
+    margin-top: 20px;
+    font-size: 1.2em;
+}
+
+#message button {
+    padding: 10px 20px;
+    font-size: 1em;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .card {
+        width: 60px;
+        height: 90px;
+        margin: 5px 3px;
+        font-size: 2em;
+    }
+
+    #bet-amount {
+        width: 60px;
+    }
+
+    button {
+        padding: 8px 12px;
+        margin: 5px;
+    }
+
+    #game-table {
+        padding: 0 10px;
+    }
+}
+
+@media (max-width: 480px) {
+    h2, h3 {
+        font-size: 1.2em;
+    }
+
+    p, label {
+        font-size: 0.9em;
+    }
+
+    .card {
+        width: 50px;
+        height: 75px;
+        margin: 5px 2px;
+        font-size: 1.8em;
+    }
+
+    #bet-amount {
+        width: 50px;
+    }
+
+    button {
+        padding: 6px 10px;
+        font-size: 0.9em;
+    }
+}
